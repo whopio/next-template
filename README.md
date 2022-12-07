@@ -48,7 +48,7 @@ The examples in this list show how to use `@whop-sdk/core` in the new `app` dire
 
 #### `/api`
 
-- `pages/api/pass-gated`: This `api route` uses the user session to obtain a user-scoped instance of the WhopSDK `UserService` and then uses that to check if the authorised used owns a certain pass.
+- `pages/api/pass-gated.ts`: This `api route` uses the user session to obtain a user-scoped instance of the WhopSDK `UserService` and then uses that to check if the authorised used owns a certain pass.
 
 ## Learn More
 
