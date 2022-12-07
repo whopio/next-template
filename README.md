@@ -44,7 +44,7 @@ The examples in this list show how to use `@whop-sdk/core` in the new `app` dire
 - `app/app/ssr/page.tsx`: This `page` shows how to obtain a user-scoped instaince of the WhopSDK UserService. If its able to obtain the sdk (the user is logged-in) it shows a logout button, if not it shows a login button
 - `app/app/ssr/pass-gated/layout.tsx`: This `layout` shows how to lock a layout (and its children) for users that don't own a specific pass. If no pass is owned it renders a button that allows the user to purchase a pass unlocking the layout on whop.com
 - `app/app/ssr/pass-gated/page.tsx`: This `page` is pass-gated without any extra setup as its parent `layout`(`app/app/ssr/pass-gated/layout.tsx`) is already pass-gated
-- `app/app/ssg/pass-gated/page.tsx`: This `page` is protected by `middleware`, conceptually similar to `pages/ssg/pass-gated.tsx
+- `app/app/ssg/pass-gated/page.tsx`: This `page` is protected by `middleware`, conceptually similar to `pages/ssg/pass-gated.tsx`
 
 #### `/api`
 
