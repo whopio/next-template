@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project craeted from the [`whop-next-template`](https://github.com/whopio/next-template/).
+This is a [Next.js](https://nextjs.org/) project created using the [`whop-next-template`](https://github.com/whopio/next-template/).
 
 ## Getting Started
 
