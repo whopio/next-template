@@ -1,10 +1,7 @@
-import './globals.css'
+import { NextLayout } from "@/types/app-dir";
+import "./globals.css";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+const RootLayout: NextLayout = ({ children }) => {
   return (
     <html lang="en">
       {/*
@@ -14,5 +11,7 @@ export default function RootLayout({
       <head />
       <body>{children}</body>
     </html>
-  )
-}
+  );
+};
+
+export default RootLayout;

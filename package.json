@@ -15,8 +15,15 @@
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
     "next": "13.0.6",
+    "next-auth": "^4.18.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "4.9.3"
+  },
+  "devDependencies": {
+    "@whop-sdk/core": "0.0.3-canary.4",
+    "@whop-sdk/swr": "^0.0.1",
+    "axios": "1.2.0",
+    "swr": "^1.3.0"
   }
 }
