@@ -27,13 +27,7 @@ export default async function SSRPassGatedLayout({
   if (!membership) {
     return (
       <Link
-        href={
-          getPurchaseLink(
-            process.env.NEXT_PUBLIC_WHOP_COMPANY_NAME!,
-            RECOMMENDED_PLAN,
-            "/app/ssr/pass-gated"
-          ).href
-        }
+        href={getPurchaseLink(RECOMMENDED_PLAN, "/app/ssr/pass-gated").href}
       >
         Buy Access Pass
       </Link>

@@ -14,11 +14,7 @@ export default withAuth(async (req) => {
   const membership = await findPass(sdk, ALLOWED_PASSES);
   if (membership) return NextResponse.next();
   return NextResponse.redirect(
-    getPurchaseLink(
-      process.env.NEXT_PUBLIC_WHOP_COMPANY_NAME!,
-      RECOMMENDED_PLAN,
-      "/ssg/pass-gated"
-    )
+    getPurchaseLink(RECOMMENDED_PLAN, "/ssg/pass-gated")
   );
 });
 

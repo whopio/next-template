@@ -22,15 +22,7 @@ type PassGatedProps = {
 const page: NextPage<PassGatedProps> = ({ membership }) => {
   if (!membership) {
     return (
-      <Link
-        href={
-          getPurchaseLink(
-            process.env.NEXT_PUBLIC_WHOP_COMPANY_NAME!,
-            RECOMMENDED_PLAN,
-            "/ssr/pass-gated"
-          ).href
-        }
-      >
+      <Link href={getPurchaseLink(RECOMMENDED_PLAN, "/ssr/pass-gated").href}>
         Buy Pass
       </Link>
     );
