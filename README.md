@@ -1,8 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project craeted from the [`whop-next-template`](https://github.com/whopio/next-template/).
 
 ## Getting Started
 
-First, run the development server:
+First, set the required environment variables:
+
+```.env
+NEXT_PUBLIC_WHOP_CLIENT_ID="WHOP_CLIENT_ID"
+NEXT_PUBLIC_WHOP_COMPANY_NAME="WHOP_COMPANY_NAME"
+WHOP_CLIENT_SECRET="WHOP_CLIENT_SECRET"
+NEXTAUTH_URL="NEXTAUTH_URL"
+NEXTAUTH_SECRET="NEXTAUTH_SECRET"
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
