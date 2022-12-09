@@ -8,12 +8,13 @@ import { PropsWithChildren } from "react";
 /**
  * a list of pass IDs that are allowed to view this page
  */
-const ALLOWED_PASSES: string[] = ["pass_PWR383wNV3raE"];
+const ALLOWED_PASSES: string[] =
+  process.env.NEXT_PUBLIC_REQUIRED_PASS?.split(",") || [];
 /**
  * a plan that is recommended to buy if the user does not
  * own a required pass
  */
-const RECOMMENDED_PLAN = "plan_OZheinzlmzTEk";
+const RECOMMENDED_PLAN = process.env.NEXT_PUBLIC_RECOMMENDED_PLAN_ID || "";
 
 export default async function SSRPassGatedLayout({
   children,

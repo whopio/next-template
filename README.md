@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project created using the [`whop-next-template`](https://github.com/whopio/next-template/).
+This is a [Next.js](https://nextjs.org/) project created using the [`whop-next-template`](https://github.com/whopio/next-template/)
 
 ## Getting Started
 
@@ -7,10 +7,12 @@ This is a [Next.js](https://nextjs.org/) project created using the [`whop-next-t
 First, set the required environment variables:
 
 ```.env
-NEXT_PUBLIC_WHOP_CLIENT_ID="WHOP_CLIENT_ID"
-WHOP_CLIENT_SECRET="WHOP_CLIENT_SECRET"
+NEXT_PUBLIC_WHOP_CLIENT_ID="WHOP CLIENT ID"
+WHOP_CLIENT_SECRET="WHOP CLIENT SECRET"
 NEXTAUTH_URL="http://localhost:3000"
-NEXTAUTH_SECRET="NEXTAUTH_SECRET"
+NEXTAUTH_SECRET="NEXTAUTH SECRET"
+NEXT_PUBLIC_RECOMMENDED_PLAN_ID="PLAN ID"
+NEXT_PUBLIC_REQUIRED_PASS="PASS ID"
 ```
 
 Then, run the development server:
