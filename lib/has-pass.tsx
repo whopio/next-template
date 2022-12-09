@@ -1,4 +1,5 @@
-import type { UserService } from "@whop-sdk/core";
+import type { UserService } from "@whop-sdk/core/node/services/UserService";
+import { WhopSDK } from "@whop-sdk/core/browser";
 import { cache } from "react";
 
 /**
@@ -7,7 +8,8 @@ import { cache } from "react";
  */
 const findPass = async (sdk: UserService, allowedPasses: string | string[]) => {
   if (typeof allowedPasses === "string") allowedPasses = [allowedPasses];
-  const memberships = (await sdk.listUsersMemberships({ valid: true })).data;
+  const memberships = (await sdk.listUsersMemberships({ status: "active" }))
+    .data;
   return (
     memberships?.find(
       (membership) =>

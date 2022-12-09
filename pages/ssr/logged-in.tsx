@@ -1,4 +1,4 @@
-import { pages as getSdk } from "@/lib/get-sdk";
+import getSdk from "@/lib/get-sdk/pages";
 import { User } from "@whop-sdk/core";
 import {
   GetServerSideProps,

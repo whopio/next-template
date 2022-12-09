@@ -1,6 +1,6 @@
 import { User } from "@whop-sdk/core";
 import { GetServerSideProps } from "next";
-import { pages as getSdk } from "./get-sdk";
+import getSdk from "@/lib/get-sdk/pages";
 
 export type UserProps = {
   user: User | null;

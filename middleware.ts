@@ -1,4 +1,4 @@
-import { middleware as getSdk } from "@/lib/get-sdk";
+import getSdk from "@/lib/get-sdk/middleware";
 import withAuth from "next-auth/middleware";
 import { NextResponse } from "next/server";
 import getPurchaseLink from "./lib/get-purchase-link";

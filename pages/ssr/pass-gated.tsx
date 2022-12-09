@@ -1,5 +1,5 @@
 import getPurchaseLink from "@/lib/get-purchase-link";
-import { pages as getSdk } from "@/lib/get-sdk";
+import getSdk from "@/lib/get-sdk/pages";
 import findPass from "@/lib/has-pass";
 import { Membership } from "@whop-sdk/core";
 import { GetServerSideProps, NextPage } from "next";

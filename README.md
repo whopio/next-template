@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org/) project created using the [`whop-next-t
 
 ## Getting Started
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwhopio%2Fnext-template)
+
 First, set the required environment variables:
 
 ```.env

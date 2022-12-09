@@ -1,5 +1,5 @@
 import getPurchaseLink from "@/lib/get-purchase-link";
-import { app as getSdk } from "@/lib/get-sdk";
+import getSdk from "@/lib/get-sdk/app";
 import { cached as findPass } from "@/lib/has-pass";
 import Link from "next/link";
 import { redirect } from "next/navigation";

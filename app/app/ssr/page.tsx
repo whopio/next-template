@@ -1,4 +1,4 @@
-import { app as getSdk } from "@/lib/get-sdk";
+import getSdk from "@/lib/get-sdk/app";
 import { NextAppPage } from "@/types/app-dir";
 import Button from "./buttons";
 
