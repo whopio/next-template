@@ -8,8 +8,7 @@ import { cache } from "react";
  */
 const findPass = async (sdk: UserService, allowedPasses: string | string[]) => {
   if (typeof allowedPasses === "string") allowedPasses = [allowedPasses];
-  const memberships = (await sdk.listUsersMemberships({ status: "active" }))
-    .data;
+  const memberships = (await sdk.listUsersMemberships({ valid: true })).data;
   return (
     memberships?.find(
       (membership) =>
