@@ -28,7 +28,7 @@ const page: NextPage<PassGatedProps> = ({ membership }) => {
       </Link>
     );
   }
-  return <></>;
+  return <>Pass owned</>;
 };
 
 export default page;
