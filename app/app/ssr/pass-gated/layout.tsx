@@ -4,6 +4,7 @@ import { cached as findPass } from "@/lib/has-pass";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { PropsWithChildren } from "react";
+import PurchaseLink from "./PurchaseLink";
 
 /**
  * a list of pass IDs that are allowed to view this page
@@ -27,11 +28,9 @@ export default async function SSRPassGatedLayout({
   // show a buy link if no membership matches
   if (!membership) {
     return (
-      <Link
-        href={getPurchaseLink(RECOMMENDED_PLAN, "/app/ssr/pass-gated").href}
-      >
-        Buy Access Pass
-      </Link>
+      <PurchaseLink plan={RECOMMENDED_PLAN}>
+        <button>Buy Access Pass</button>
+      </PurchaseLink>
     );
   }
   return children;

@@ -1,4 +1,4 @@
-import getPurchaseLink from "@/lib/get-purchase-link";
+import getPurchaseLink, { usePurchaseLink } from "@/lib/get-purchase-link";
 import getSdk from "@/lib/get-sdk/pages";
 import findPass from "@/lib/has-pass";
 import { Membership } from "@whop-sdk/core";
@@ -20,18 +20,19 @@ type PassGatedProps = {
   membership: Membership | null;
 };
 
-const page: NextPage<PassGatedProps> = ({ membership }) => {
+const Page: NextPage<PassGatedProps> = ({ membership }) => {
+  const link = usePurchaseLink(RECOMMENDED_PLAN);
   if (!membership) {
     return (
-      <Link href={getPurchaseLink(RECOMMENDED_PLAN, "/ssr/pass-gated").href}>
-        Buy Pass
+      <Link href={link}>
+        <button>Buy Access Pass</button>
       </Link>
     );
   }
   return <>Pass owned</>;
 };
 
-export default page;
+export default Page;
 
 /**
  * This first makes sure the user is logged in, redirecting them if they are not
