@@ -1,5 +1,4 @@
 import type { UserService } from "@whop-sdk/core/node/services/UserService";
-import { WhopSDK } from "@whop-sdk/core/browser";
 import { cache } from "react";
 
 /**

@@ -1,7 +1,5 @@
-import getPurchaseLink from "@/lib/get-purchase-link";
 import getSdk from "@/lib/get-sdk/app";
 import { cached as findPass } from "@/lib/has-pass";
-import Link from "next/link";
 import { redirect } from "next/navigation";
 import { PropsWithChildren } from "react";
 import PurchaseLink from "./PurchaseLink";

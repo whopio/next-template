@@ -1,4 +1,4 @@
-import getPurchaseLink, { usePurchaseLink } from "@/lib/get-purchase-link";
+import { usePurchaseLink } from "@/lib/get-purchase-link";
 import getSdk from "@/lib/get-sdk/pages";
 import findPass from "@/lib/has-pass";
 import { Membership } from "@whop-sdk/core";
