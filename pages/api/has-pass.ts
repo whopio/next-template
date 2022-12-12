@@ -1,4 +1,4 @@
-import getSdk from "@/lib/get-sdk/pages";
+import getSdk from "@/lib/get-user-sdk/pages";
 import findPass from "@/lib/has-pass";
 import { Membership } from "@whop-sdk/core";
 import { NextApiHandler } from "next";

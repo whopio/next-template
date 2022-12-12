@@ -1,4 +1,4 @@
-import getSdk from "@/lib/get-sdk/pages";
+import getSdk from "@/lib/get-user-sdk/pages";
 import { User } from "@whop-sdk/core";
 import {
   GetServerSideProps,
@@ -33,7 +33,7 @@ export const getServerSideProps: GetServerSideProps<{ user: User }> = async ({
         permanent: false,
       },
     };
-  const user = await sdk.retrieveProfile();
+  const user = await sdk.retrieveProfile({});
   return {
     props: { user },
   };

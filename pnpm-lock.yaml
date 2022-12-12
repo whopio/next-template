@@ -4,7 +4,7 @@ specifiers:
   '@types/node': 18.11.11
   '@types/react': 18.0.26
   '@types/react-dom': 18.0.9
-  '@whop-sdk/core': 0.0.3
+  '@whop-sdk/core': 0.0.4-canary.1
   eslint: 8.29.0
   eslint-config-next: 13.0.6
   next: 13.0.6
@@ -26,7 +26,7 @@ dependencies:
   typescript: 4.9.3
 
 devDependencies:
-  '@whop-sdk/core': 0.0.3
+  '@whop-sdk/core': 0.0.4-canary.1
 
 packages:
 
@@ -348,8 +348,8 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: false
 
-  /@whop-sdk/core/0.0.3:
-    resolution: {integrity: sha512-72taQlPV+30GqRRwDZAxgVX6aq+xDV2Pv8PRvHHUFKyajoSl9vwpHgKRyQCkYegdig3Lx2AwZWZCdELc6VQabQ==}
+  /@whop-sdk/core/0.0.4-canary.1:
+    resolution: {integrity: sha512-h7w1g6s28i7bGxr9lGhrlnoH7PQP2w1N2bLv7Q3X1s9u/U2OpyBVggBtegt6gWMlLpwBBm/SOAAZn79ou476mA==}
     engines: {node: ^16.8.0}
     optionalDependencies:
       undici: 5.14.0
