@@ -1,12 +1,12 @@
 import getSdk from "@/lib/get-user-sdk/app";
 import { cached as findPass } from "@/lib/has-pass";
-import { redirect } from "next/navigation";
-import { PropsWithChildren } from "react";
-import { retrievePlan } from "./get-data";
-import PurchaseLink from "./PurchaseLink";
-import styles from "../../../../styles/Home.module.css";
 import Head from "next/head";
 import Image from "next/image";
+import { redirect } from "next/navigation";
+import { PropsWithChildren } from "react";
+import styles from "../../../../styles/Home.module.css";
+import { retrievePlan } from "./get-data";
+import PurchaseLink from "./PurchaseLink";
 
 /**
  * a list of pass IDs that are allowed to view this page
@@ -55,19 +55,17 @@ export default async function SSRPassGatedLayout({
               <code className={styles.code}>pages/ssr/pass-gated.tsx</code>
             </p>
             <div className={styles.grid}>
-              <a className={styles.card}>
-                <PurchaseLink plan={RECOMMENDED_PLAN}>
-                  <h2>Buy Access &rarr;</h2>
-                  <p>Purchase via Whop.</p>
-                </PurchaseLink>
-              </a>
+              <PurchaseLink className={styles.card} plan={RECOMMENDED_PLAN}>
+                <h2>Buy Access &rarr;</h2>
+                <p>Purchase via Whop.</p>
+              </PurchaseLink>
             </div>
 
             <p style={{ textAlign: "center" }}>
               Recommended Pricing Plan:{" "}
               <code>{JSON.stringify({ plan }, null, 2)}</code>
             </p>
-            <p style={{ textAlign: "center" }}>Users has membership: No</p>
+            <p style={{ textAlign: "center" }}>User has membership: No</p>
           </main>
 
           <footer className={styles.footer}>

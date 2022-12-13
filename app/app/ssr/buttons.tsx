@@ -7,14 +7,12 @@ const Button: FunctionComponent<{
   loggedIn?: boolean;
   children: any;
 }> = ({ loggedIn = false, children }) => {
-  if (!loggedIn)
-    return (
-      <a href="#" onClick={() => signIn("whop")}>
-        {children}
-      </a>
-    );
   return (
-    <a href="#" onClick={() => signOut()}>
+    <a
+      href="#"
+      style={{ textDecoration: "underline" }}
+      onClick={() => (loggedIn ? signOut() : signIn("whop"))}
+    >
       {children}
     </a>
   );

@@ -58,7 +58,7 @@ const Page: NextAppPage = async () => {
               <p>If you like this webapp, leave a review!</p>
             </a>
           </div>
-          <p style={{ textAlign: "center" }}>Users has membership: Yes!</p>
+          <p style={{ textAlign: "center" }}>User has membership: Yes!</p>
         </main>
 
         <footer className={styles.footer}>

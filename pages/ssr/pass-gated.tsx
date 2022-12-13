@@ -1,9 +1,9 @@
 import { usePurchaseLink } from "@/lib/get-purchase-link";
 import getSdk from "@/lib/get-user-sdk/pages";
 import findPass from "@/lib/has-pass";
+import ServerSDK from "@/lib/sdk";
 import { AccessPass, Membership, Plan } from "@whop-sdk/core";
 import { GetServerSideProps, NextPage } from "next";
-import ServerSDK from "@/lib/sdk";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../../styles/Home.module.css";
@@ -65,7 +65,7 @@ const Page: NextPage<PassGatedProps> = ({ membership, pass, plan }) => {
             Recommended Pricing Plan:{" "}
             <code>{JSON.stringify({ plan }, null, 2)}</code>
           </p>
-          <p style={{ textAlign: "center" }}>Users has membership: No</p>
+          <p style={{ textAlign: "center" }}>User has membership: No</p>
         </main>
 
         <footer className={styles.footer}>
@@ -119,7 +119,7 @@ const Page: NextPage<PassGatedProps> = ({ membership, pass, plan }) => {
             <p>If you like this webapp, leave a review!</p>
           </a>
         </div>
-        <p style={{ textAlign: "center" }}>Users has membership: Yes!</p>
+        <p style={{ textAlign: "center" }}>User has membership: Yes!</p>
       </main>
 
       <footer className={styles.footer}>
