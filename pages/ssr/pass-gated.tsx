@@ -70,7 +70,7 @@ const Page: NextPage<PassGatedProps> = ({ membership, pass, plan }) => {
 
         <footer className={styles.footer}>
           <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="https://dash.whop.com"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -124,7 +124,7 @@ const Page: NextPage<PassGatedProps> = ({ membership, pass, plan }) => {
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://dash.whop.com"
           target="_blank"
           rel="noopener noreferrer"
         >
