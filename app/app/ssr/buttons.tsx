@@ -5,10 +5,18 @@ import { FunctionComponent } from "react";
 
 const Button: FunctionComponent<{
   loggedIn: boolean;
-}> = ({ loggedIn }) => {
+}> = ({ loggedIn, children }) => {
   if (!loggedIn)
-    return <button onClick={() => signIn("whop")}>Log in with Whop</button>;
-  return <button onClick={() => signOut()}>Log out</button>;
+    return (
+      <a href="#" onClick={() => signIn("whop")}>
+        {children}
+      </a>
+    );
+  return (
+    <a href="#" onClick={() => signOut()}>
+      {children}
+    </a>
+  );
 };
 
 export default Button;
