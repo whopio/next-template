@@ -3,6 +3,7 @@ import { NextPage } from "next";
 import { signIn, signOut } from "next-auth/react";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../../styles/Home.module.css";
 
 const Page: NextPage<UserProps> = ({ user }) => {
@@ -17,26 +18,26 @@ const Page: NextPage<UserProps> = ({ user }) => {
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to{" "}
-          <a
+          <Link
             target="_blank"
             rel="noopener noreferrer"
             href="https://dash.whop.com"
           >
             Whop!
-          </a>
+          </Link>
         </h1>
         <p className={styles.description}>
           This page could be your homepage before a user accesses your
           application, and this state is meant to represent a user who is{" "}
           <b>{user ? "logged in" : "logged out"}. </b>{" "}
           {user && (
-            <a
+            <Link
               href="#"
               style={{ textDecoration: "underline" }}
               onClick={() => signOut()}
             >
               Click here to logout
-            </a>
+            </Link>
           )}
           <br></br>
           <br></br>You can edit this page in{" "}
@@ -45,10 +46,14 @@ const Page: NextPage<UserProps> = ({ user }) => {
 
         {!user ? (
           <div className={styles.grid}>
-            <a href="#" onClick={() => signIn("whop")} className={styles.card}>
+            <Link
+              href="#"
+              onClick={() => signIn("whop")}
+              className={styles.card}
+            >
               <h2>Login &rarr;</h2>
               <p>Proceed to sign in with Whop</p>
-            </a>
+            </Link>
           </div>
         ) : (
           <>
@@ -56,21 +61,21 @@ const Page: NextPage<UserProps> = ({ user }) => {
               Logged in user object: {JSON.stringify(user, null, 2)}
             </p>
             <div className={styles.grid}>
-              <a href="/ssr/pass-gated" className={styles.card}>
+              <Link href="/ssr/pass-gated" className={styles.card}>
                 <h2>Access Application &rarr;</h2>
                 <p>This is an SSR gating of your application.</p>
-              </a>
-              <a href="/ssg/pass-gated" className={styles.card}>
+              </Link>
+              <Link href="/ssg/pass-gated" className={styles.card}>
                 <h2>Access Application &rarr;</h2>
                 <p>This is an SSG gating of your application.</p>
-              </a>
+              </Link>
             </div>
           </>
         )}
       </main>
 
       <footer className={styles.footer}>
-        <a
+        <Link
           href="https://dash.whop.com"
           target="_blank"
           rel="noopener noreferrer"
@@ -79,7 +84,7 @@ const Page: NextPage<UserProps> = ({ user }) => {
           <span className={styles.logo}>
             <Image src="/logo.svg" alt="Whop Logo" width={72} height={16} />
           </span>
-        </a>
+        </Link>
       </footer>
     </div>
   );

@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 const IndexPage: NextPage = () => {
@@ -15,13 +16,13 @@ const IndexPage: NextPage = () => {
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to{" "}
-          <a
+          <Link
             target="_blank"
             rel="noopener noreferrer"
             href="https://dash.whop.com"
           >
             Whop!
-          </a>
+          </Link>
         </h1>
 
         <p className={styles.description}>
@@ -30,27 +31,27 @@ const IndexPage: NextPage = () => {
         </p>
 
         <div className={styles.grid}>
-          <a href="/ssr" className={styles.card}>
+          <Link href="/ssr" className={styles.card}>
             <h2>Pages (Next 12) &rarr;</h2>
             <p>
               View an implementation of our payment gate with the pages
               directory.
             </p>
-          </a>
+          </Link>
 
-          <a href="/app/ssr" className={styles.card}>
+          <Link href="/app/ssr" className={styles.card}>
             <h2>App (Next 13) &rarr;</h2>
             <p>
               View an implementation of our payment gate with the app directory.
             </p>
-          </a>
+          </Link>
 
-          <a href="https://dev.whop.com" className={styles.card}>
+          <Link href="https://dev.whop.com" className={styles.card}>
             <h2>More Docs &rarr;</h2>
             <p>Discover all of the things you can do with Whop API.</p>
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="https://whop.com?source=nextjs"
             target="_blank"
             rel="noopener noreferrer"
@@ -58,12 +59,12 @@ const IndexPage: NextPage = () => {
           >
             <h2>Marketplace &rarr;</h2>
             <p>View the Whop marketplace where your app can live!</p>
-          </a>
+          </Link>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <a
+        <Link
           href="https://dash.whop.com"
           target="_blank"
           rel="noopener noreferrer"
@@ -72,7 +73,7 @@ const IndexPage: NextPage = () => {
           <span className={styles.logo}>
             <Image src="/logo.svg" alt="Whop Logo" width={72} height={16} />
           </span>
-        </a>
+        </Link>
       </footer>
     </div>
   );

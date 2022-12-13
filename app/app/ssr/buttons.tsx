@@ -4,8 +4,9 @@ import { signIn, signOut } from "next-auth/react";
 import { FunctionComponent } from "react";
 
 const Button: FunctionComponent<{
-  loggedIn: boolean;
-}> = ({ loggedIn, children }) => {
+  loggedIn?: boolean;
+  children: any;
+}> = ({ loggedIn = false, children }) => {
   if (!loggedIn)
     return (
       <a href="#" onClick={() => signIn("whop")}>

@@ -35,7 +35,7 @@ const Page: NextAppPage = async () => {
             <b>{sdk ? "logged in" : "logged out"}. </b>{" "}
             {sdk && (
               <a href="#" style={{ textDecoration: "underline" }}>
-                <Button loggedIn={sdk}> Click here to logout</Button>
+                <Button loggedIn={!!sdk}> Click here to logout</Button>
               </a>
             )}
             <br></br>
@@ -84,7 +84,6 @@ const Page: NextAppPage = async () => {
           </a>
         </footer>
       </div>
-      <Button loggedIn={!!sdk} />
     </>
   );
 };
