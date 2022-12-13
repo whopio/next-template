@@ -5,7 +5,7 @@ import styles from "../../../styles/Home.module.css";
 import Button from "./buttons";
 
 const Page: NextAppPage = async () => {
-  const { sdk } = await getSdk();
+  const { sdk, user } = await getSdk();
   return (
     <>
       <div className={styles.container}>
@@ -42,7 +42,7 @@ const Page: NextAppPage = async () => {
           ) : (
             <>
               <p style={{ textAlign: "center" }}>
-                Logged in user object: {JSON.stringify(sdk, null, 2)}
+                Logged in user object: {JSON.stringify(user, null, 2)}
               </p>
               <div className={styles.grid}>
                 <a href="/app/ssr/pass-gated" className={styles.card}>
