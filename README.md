@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project created using the [`whop-next-t
 
 ## Getting Started
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwhopio%2Fnext-template)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwhopio%2Fnext-template&env=NEXT_PUBLIC_WHOP_CLIENT_ID,WHOP_CLIENT_SECRET,WHOP_BOT_TOKEN,NEXT_PUBLIC_RECOMMENDED_PLAN_ID,NEXT_PUBLIC_REQUIRED_PASS,NEXTAUTH_SECRET&envDescription=Follow%20the%20instructions%20here%20to%20obtain%20the%20env%20vars%20above%3A&envLink=https%3A%2F%2Fgithub.com%2Fwhopio%2Fnext-template%2Fblob%2Fmain%2F.env.example&project-name=whop-next-template&repository-name=whop-next-template&demo-title=Whop%20Next.js%20Template&demo-description=Whop%20Next.js%20Template&demo-url=https%3A%2F%2Fnext-template-whop.vercel.app%2F&demo-image=https%3A%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F4Xc0tWaSTiUEoRUI6Nyj4C%2F38157dced5977daa0a0ef2e093731023%2Fwhop-nextjs.png%3Fh%3D250)
 
 First, set the required environment variables:
 
