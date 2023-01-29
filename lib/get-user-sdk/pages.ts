@@ -1,6 +1,6 @@
 import { WhopSDK } from "@whop-sdk/core";
 import type { GetServerSidePropsContext } from "next";
-import { getServerSession } from "next-auth";
+import { unstable_getServerSession } from "next-auth";
 import { authOptions } from "../auth";
 
 /**
@@ -11,7 +11,7 @@ const getSdk = async (
   req: GetServerSidePropsContext["req"],
   res: GetServerSidePropsContext["res"]
 ) => {
-  const session = await getServerSession(req, res, authOptions);
+  const session = await unstable_getServerSession(req, res, authOptions);
   if (!session) return {};
   return {
     sdk: new WhopSDK({ TOKEN: session.accessToken }).userOAuth,

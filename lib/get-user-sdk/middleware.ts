@@ -9,7 +9,7 @@ const getSdk = (req: NextRequestWithAuth) => {
   const token = req.nextauth.token?.accessToken as string;
   if (!token) return {};
   return {
-    sdk: new WhopSDK({ TOKEN: token }).user,
+    sdk: new WhopSDK({ TOKEN: token }).userOAuth,
   };
 };
 
