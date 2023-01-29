@@ -1,5 +1,5 @@
 import getSdk from "@/lib/get-user-sdk/app";
-import { cached as findPass } from "@/lib/has-pass";
+import { cached as findProduct } from "@/lib/has-product";
 import Head from "next/head";
 import Image from "next/image";
 import { redirect } from "next/navigation";
@@ -9,23 +9,23 @@ import { retrievePlan } from "./get-data";
 import PurchaseLink from "./PurchaseLink";
 
 /**
- * a list of pass IDs that are allowed to view this page
+ * a list of product IDs that are allowed to view this page
  */
-const ALLOWED_PASS: string = process.env.NEXT_PUBLIC_REQUIRED_PASS || "";
+const ALLOWED_PRODUCT: string = process.env.NEXT_PUBLIC_REQUIRED_PRODUCT || "";
 /**
  * a plan that is recommended to buy if the user does not
- * own a required pass
+ * own a required product
  */
 const RECOMMENDED_PLAN = process.env.NEXT_PUBLIC_RECOMMENDED_PLAN_ID || "";
 
-export default async function SSRPassGatedLayout({
+export default async function SSRProductGatedLayout({
   children,
 }: PropsWithChildren<{}>) {
   // get the sdk from the user session and redirect if not logged in
   const { sdk } = await getSdk();
   if (!sdk) return redirect("/app/ssr");
   // find the membership
-  const membership = await findPass(sdk, ALLOWED_PASS);
+  const membership = await findProduct(sdk, ALLOWED_PRODUCT);
   // show a buy link if no membership matches
   if (!membership) {
     /**
@@ -49,10 +49,10 @@ export default async function SSRPassGatedLayout({
             </h1>
             <p className={styles.description}>
               This page is shown to a user who is signed in, but does not
-              currently own an Access Pass.
+              currently own a product.
               <br></br>
               <br></br>You can edit this page in{" "}
-              <code className={styles.code}>pages/ssr/pass-gated.tsx</code>
+              <code className={styles.code}>pages/ssr/product-gated.tsx</code>
             </p>
             <div className={styles.grid}>
               <PurchaseLink className={styles.card} plan={RECOMMENDED_PLAN}>
@@ -83,7 +83,7 @@ export default async function SSRPassGatedLayout({
         </div>
         Plan: {JSON.stringify(plan, null, 2)}
         <PurchaseLink plan={RECOMMENDED_PLAN}>
-          <button>Buy Access Pass</button>
+          <button>Buy Access to Product</button>
         </PurchaseLink>
       </>
     );

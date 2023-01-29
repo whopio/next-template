@@ -5,6 +5,6 @@ export const retrievePlan = cache((id: string) => {
   return ServerSDK.plans.retrievePlan({ id });
 });
 
-export const retrieveAccessPass = cache((id: string) => {
-  return ServerSDK.accessPasses.retrieveAccessPass({ id });
+export const retrieveProduct = cache((id: string) => {
+  return ServerSDK.products.retrieveProduct({ id });
 });

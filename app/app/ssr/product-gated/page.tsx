@@ -1,26 +1,26 @@
 import getSdk from "@/lib/get-user-sdk/app";
-import findPass from "@/lib/has-pass";
+import findProduct from "@/lib/has-product";
 import { NextAppPage } from "@/types/app-dir";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../../../../styles/Home.module.css";
 
-const ALLOWED_PASS: string = process.env.NEXT_PUBLIC_REQUIRED_PASS || "";
+const ALLOWED_PRODUCT: string = process.env.NEXT_PUBLIC_REQUIRED_PRODUCT || "";
 
 /**
- * The Layout of this level is pass-gated, which makes
+ * The Layout of this level is product-gated, which makes
  * and page child gated without extra configuration.
  */
 const Page: NextAppPage = async () => {
   /**
    * get the sdk and membership again here, this is
    * only done to get the data and not to verify the user
-   * owns the pass. if the user does not own the pass this
+   * owns the product. if the user does not own the product this
    * section will never be rendered as the layout already
-   * verifies that the pass is owned.
+   * verifies that the product is owned.
    */
   const { sdk } = await getSdk();
-  const membership = (await findPass(sdk!, ALLOWED_PASS))!;
+  const membership = (await findProduct(sdk!, ALLOWED_PRODUCT))!;
   return (
     <>
       <div className={styles.container}>
@@ -36,10 +36,10 @@ const Page: NextAppPage = async () => {
           </h1>
           <p className={styles.description}>
             This page is shown to a user who is signed in, and owns your
-            required access pass!
+            required product!
             <br></br>
             <br></br>You can edit this page in{" "}
-            <code className={styles.code}>pages/ssr/pass-gated.tsx</code>
+            <code className={styles.code}>pages/ssr/product-gated.tsx</code>
           </p>
           <div className={styles.grid}>
             <a

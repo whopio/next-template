@@ -6,7 +6,7 @@ import { NextAppPage } from "@/types/app-dir";
  * be statically served
  */
 const Page: NextAppPage = () => {
-  return <>Pass owned!</>;
+  return <>Product owned!</>;
 };
 
 export default Page;
