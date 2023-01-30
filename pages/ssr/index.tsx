@@ -61,11 +61,11 @@ const Page: NextPage<UserProps> = ({ user }) => {
               Logged in user object: {JSON.stringify(user, null, 2)}
             </p>
             <div className={styles.grid}>
-              <Link href="/ssr/pass-gated" className={styles.card}>
+              <Link href="/ssr/product-gated" className={styles.card}>
                 <h2>Access Application &rarr;</h2>
                 <p>This is an SSR gating of your application.</p>
               </Link>
-              <Link href="/ssg/pass-gated" className={styles.card}>
+              <Link href="/ssg/product-gated" className={styles.card}>
                 <h2>Access Application &rarr;</h2>
                 <p>This is an SSG gating of your application.</p>
               </Link>

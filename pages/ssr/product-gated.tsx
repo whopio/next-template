@@ -1,36 +1,36 @@
 import { usePurchaseLink } from "@/lib/get-purchase-link";
 import getSdk from "@/lib/get-user-sdk/pages";
-import findPass from "@/lib/has-pass";
+import findProduct from "@/lib/has-product";
 import ServerSDK from "@/lib/sdk";
-import { AccessPass, Membership, Plan } from "@whop-sdk/core";
+import { Membership, Plan, Product } from "@whop-sdk/core";
 import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../../styles/Home.module.css";
 
 /**
- * a list of pass IDs that are allowed to view this page
+ * a list of product IDs that are allowed to view this page
  */
-const ALLOWED_PASS: string = process.env.NEXT_PUBLIC_REQUIRED_PASS || "";
+const ALLOWED_PRODUCT: string = process.env.NEXT_PUBLIC_REQUIRED_PRODUCT || "";
 /**
  * a plan that is recommended to buy if the user does not
- * own a required pass
+ * own a required product
  */
 const RECOMMENDED_PLAN = process.env.NEXT_PUBLIC_RECOMMENDED_PLAN_ID || "";
 
-type PassGatedProps =
+type ProductGatedProps =
   | {
       membership: Membership;
-      pass: null;
+      product: null;
       plan: null;
     }
   | {
       membership: null;
-      pass: AccessPass;
+      product: Product;
       plan: Plan;
     };
 
-const Page: NextPage<PassGatedProps> = ({ membership, pass, plan }) => {
+const Page: NextPage<ProductGatedProps> = ({ membership, product, plan }) => {
   const link = usePurchaseLink(RECOMMENDED_PLAN);
   if (!membership) {
     return (
@@ -47,10 +47,10 @@ const Page: NextPage<PassGatedProps> = ({ membership, pass, plan }) => {
           </h1>
           <p className={styles.description}>
             This page is shown to a user who is signed in, but does not
-            currently own an Access Pass.
+            currently own a Product.
             <br></br>
             <br></br>You can edit this page in{" "}
-            <code className={styles.code}>pages/ssr/pass-gated.tsx</code>
+            <code className={styles.code}>pages/ssr/product-gated.tsx</code>
           </p>
           <div className={styles.grid}>
             <a href={link} className={styles.card}>
@@ -59,7 +59,7 @@ const Page: NextPage<PassGatedProps> = ({ membership, pass, plan }) => {
             </a>
           </div>
           <p style={{ textAlign: "center" }}>
-            Required Pass to Own: {JSON.stringify({ pass }, null, 2)}
+            Required Product to Own: {JSON.stringify({ product }, null, 2)}
           </p>
           <p style={{ textAlign: "center" }}>
             Recommended Pricing Plan:{" "}
@@ -97,10 +97,10 @@ const Page: NextPage<PassGatedProps> = ({ membership, pass, plan }) => {
         </h1>
         <p className={styles.description}>
           This page is shown to a user who is signed in, and owns your required
-          access pass!
+          product!
           <br></br>
           <br></br>You can edit this page in{" "}
-          <code className={styles.code}>pages/ssr/pass-gated.tsx</code>
+          <code className={styles.code}>pages/ssr/product-gated.tsx</code>
         </p>
         <div className={styles.grid}>
           <a
@@ -142,13 +142,12 @@ export default Page;
 
 /**
  * This first makes sure the user is logged in, redirecting them if they are not
- * and then checks if the user owns a membership specified in the ALLOWED_PASSES
+ * and then checks if the user owns a membership specified in the ALLOWED_PRODUCTES
  * array.
  */
-export const getServerSideProps: GetServerSideProps<PassGatedProps> = async ({
-  req,
-  res,
-}) => {
+export const getServerSideProps: GetServerSideProps<
+  ProductGatedProps
+> = async ({ req, res }) => {
   const { sdk } = await getSdk(req, res);
   if (!sdk)
     return {
@@ -157,19 +156,19 @@ export const getServerSideProps: GetServerSideProps<PassGatedProps> = async ({
         permanent: false,
       },
     };
-  const membership = await findPass(sdk, ALLOWED_PASS);
+  const membership = await findProduct(sdk, ALLOWED_PRODUCT);
   if (membership)
     return {
       props: {
         membership,
-        pass: null,
+        product: null,
         plan: null,
       },
     };
   else {
-    const [pass, plan] = await Promise.all([
-      ServerSDK.accessPasses.retrieveAccessPass({
-        id: ALLOWED_PASS,
+    const [product, plan] = await Promise.all([
+      ServerSDK.products.retrieveProduct({
+        id: ALLOWED_PRODUCT,
       }),
       ServerSDK.plans.retrievePlan({
         id: RECOMMENDED_PLAN,
@@ -178,7 +177,7 @@ export const getServerSideProps: GetServerSideProps<PassGatedProps> = async ({
     return {
       props: {
         membership: null,
-        pass,
+        product,
         plan,
       },
     };

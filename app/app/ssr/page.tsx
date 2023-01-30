@@ -45,11 +45,11 @@ const Page: NextAppPage = async () => {
                 Logged in user object: {JSON.stringify(user, null, 2)}
               </p>
               <div className={styles.grid}>
-                <a href="/app/ssr/pass-gated" className={styles.card}>
+                <a href="/app/ssr/product-gated" className={styles.card}>
                   <h2>Access Application &rarr;</h2>
                   <p>This is an SSR gating of your application.</p>
                 </a>
-                <a href="/app/ssg/pass-gated" className={styles.card}>
+                <a href="/app/ssg/product-gated" className={styles.card}>
                   <h2>Access Application &rarr;</h2>
                   <p>This is an SSG gating of your application.</p>
                 </a>
