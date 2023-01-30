@@ -16,15 +16,17 @@ NEXT_PUBLIC_RECOMMENDED_PLAN_ID="PLAN ID"
 NEXT_PUBLIC_REQUIRED_PRODUCT="PRODUCT ID"
 ```
 
+## Run locally
+
+Pull your reposity
+
+Then, install node modules:
+
+```bash
+pnpm i
+```
+
 Then, run the development server:
-
-```bash
-npm run dev
-```
-
-```bash
-yarn dev
-```
 
 ```bash
 pnpm run dev
