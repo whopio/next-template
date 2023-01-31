@@ -16,6 +16,8 @@ NEXT_PUBLIC_RECOMMENDED_PLAN_ID="PLAN ID"
 NEXT_PUBLIC_REQUIRED_PRODUCT="PRODUCT ID"
 ```
 
+Many of the environment variables can be found [here](https://dash.whop.com/settings/developer)
+
 ## Run locally
 
 Pull your reposity
