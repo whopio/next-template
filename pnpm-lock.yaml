@@ -4,7 +4,7 @@ specifiers:
   '@types/node': 18.11.11
   '@types/react': 18.0.26
   '@types/react-dom': 18.0.9
-  '@whop-sdk/core': 0.0.4-canary.7
+  '@whop-sdk/core': ^0.0.4
   eslint: 8.29.0
   eslint-config-next: 13.0.6
   next: 13.1.6
@@ -17,7 +17,7 @@ dependencies:
   '@types/node': 18.11.11
   '@types/react': 18.0.26
   '@types/react-dom': 18.0.9
-  '@whop-sdk/core': 0.0.4-canary.7
+  '@whop-sdk/core': 0.0.4
   eslint: 8.29.0
   eslint-config-next: 13.0.6_s5ps7njkmjlaqajutnox5ntcla
   next: 13.1.6_biqbaboplfbrettd7655fr4n2y
@@ -346,8 +346,8 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: false
 
-  /@whop-sdk/core/0.0.4-canary.7:
-    resolution: {integrity: sha512-FEo8p+5Odwsd5um/JnTjo/4UtSzcXfRukvOdb/MpvAhz4k6UIv5MQxFvrI6/Za3Iv1HgobqU/cFV4FAEzXIVUw==}
+  /@whop-sdk/core/0.0.4:
+    resolution: {integrity: sha512-pDSZIHtvo2etE2rUseyZ706Pd4fxyho9ENhgXwVyK2w16JWHH0Tpu89RR2RBnuQ4p1veEdzUPsRGpnEffdhPZw==}
     engines: {node: '>=16.8.0'}
     dependencies:
       form-data: 4.0.0
