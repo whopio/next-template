@@ -33,7 +33,7 @@ export const getServerSideProps: GetServerSideProps<{ user: User }> = async ({
         permanent: false,
       },
     };
-  const user = await sdk.retrieveProfile({});
+  const user = await sdk.retrieveUsersProfile({});
   return {
     props: { user },
   };
