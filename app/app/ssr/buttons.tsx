@@ -2,6 +2,7 @@
 
 import { signIn, signOut } from "next-auth/react";
 import { FunctionComponent } from "react";
+import styles from "../../../styles/Home.module.css";
 
 const Button: FunctionComponent<{
   loggedIn?: boolean;
@@ -10,7 +11,7 @@ const Button: FunctionComponent<{
   return (
     <a
       href="#"
-      style={{ textDecoration: "underline" }}
+      className={styles.card}
       onClick={() => (loggedIn ? signOut() : signIn("whop"))}
     >
       {children}

@@ -3,6 +3,10 @@
 import { usePurchaseLink } from "@/lib/get-purchase-link";
 import Link from "next/link";
 import { FunctionComponent, PropsWithChildren } from "react";
+import styles from "../../../../styles/Home.module.css";
+import { Inter } from "@next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 type PurchaseLinkProps = {
   plan: string;
@@ -18,7 +22,7 @@ const PurchaseLink: FunctionComponent<PropsWithChildren<PurchaseLinkProps>> = ({
 }) => {
   const link = usePurchaseLink(plan, redirect);
   return (
-    <Link className={className} href={link}>
+    <Link className={styles.card} href={link}>
       {children}
     </Link>
   );

@@ -102,13 +102,13 @@ const Page: NextAppPage = async () => {
                 This is an SSR gating of your application.
               </p>
             </Button>
-            <Link href="/ssr/product-gated" className={styles.card}>
+            <Link href="/app/ssr/product-gated" className={styles.card}>
               <h2 className={inter.className}>Application (SSR) &rarr;</h2>
               <p className={inter.className}>
                 This is an SSR gating of your application.
               </p>
             </Link>
-            <Link href="/ssg/product-gated" className={styles.card}>
+            <Link href="/app/ssg/product-gated" className={styles.card}>
               <h2 className={inter.className}>Application (SSG)&rarr;</h2>
               <p className={inter.className}>
                 This is an SSG gating of your application.
