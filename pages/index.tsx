@@ -87,7 +87,7 @@ const IndexPage: NextPage = () => {
               Documentation <span>-&gt;</span>
             </h2>
             <p className={inter.className}>
-              Explore the full capability of Whop's API.
+              Explore the full capability of Whop&apos;s API.
             </p>
           </a>
 
