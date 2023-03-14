@@ -42,7 +42,10 @@ const Page: NextAppPage = async () => {
               rel="noopener noreferrer"
               href="https://dash.whop.com"
             >
-              Whop{user ? `, ${user.name}!` : `!`}
+              Whop
+              {user
+                ? `, ${(await sdk.retrieveUsersProfile({})).username}!`
+                : `!`}
             </Link>
           </h1>
           <p

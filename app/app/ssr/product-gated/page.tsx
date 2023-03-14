@@ -4,8 +4,11 @@ import { NextAppPage } from "@/types/app-dir";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../../../../styles/Home.module.css";
+import { Inter } from "@next/font/google";
 
 const ALLOWED_PRODUCT: string = process.env.NEXT_PUBLIC_REQUIRED_PRODUCT || "";
+
+const inter = Inter({ subsets: ["latin"] });
 
 /**
  * The Layout of this level is product-gated, which makes
@@ -31,48 +34,59 @@ const Page: NextAppPage = async () => {
         </Head>
 
         <main className={styles.main}>
-          <h1 className={styles.title}>
-            Access <a href="#">Granted 🚀</a>
-          </h1>
-          <p className={styles.description}>
-            This page is shown to a user who is signed in, and owns your
-            required product!
-            <br></br>
-            <br></br>You can edit this page in{" "}
-            <code className={styles.code}>pages/ssr/product-gated.tsx</code>
-          </p>
-          <div className={styles.grid}>
+          <div className={styles.description}>
+            <a
+              href="/"
+              className={styles.card}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>&lt;-</span> Go back
+            </a>
+            <p>
+              Edit this page inside of{" "}
+              <code className={styles.code}>app/app/ssr/product-gated.tsx</code>
+            </p>
+          </div>
+
+          <div className={styles.center}>
+            <div className={styles.otherbox}>
+              <h1 className={inter.className}>
+                Access <a href="#">Granted 🚀</a>
+              </h1>
+              <p className={inter.className}>
+                This page is shown to a user who is signed in, and owns your
+                required product!
+              </p>
+            </div>
+          </div>
+          <div
+            className={styles.grid}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <a
               href={"https://whop.com/hub/" + membership.id}
               className={styles.card}
             >
-              <h2>Customer Portal &rarr;</h2>
-              <p>Manage your billing and access.</p>
+              <h2 className={inter.className}>Customer Portal &rarr;</h2>
+              <p className={inter.className}>Manage your billing and access.</p>
             </a>
 
             <a
               href={"https://whop.com/hub/" + membership.id}
               className={styles.card}
             >
-              <h2>Leave a review &rarr;</h2>
-              <p>If you like this webapp, leave a review!</p>
+              <h2 className={inter.className}>Leave a review &rarr;</h2>
+              <p className={inter.className}>
+                If you like this web app, leave a review!
+              </p>
             </a>
           </div>
-          <p style={{ textAlign: "center" }}>User has membership: Yes!</p>
         </main>
-
-        <footer className={styles.footer}>
-          <a
-            href="https://dash.whop.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by{" "}
-            <span className={styles.logo}>
-              <Image src="/logo.svg" alt="Whop Logo" width={72} height={16} />
-            </span>
-          </a>
-        </footer>
       </div>
     </>
   );
