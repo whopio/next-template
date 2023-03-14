@@ -15,7 +15,7 @@ const Page: NextAppPage = async () => {
     <main className={styles.main}>
       <div className={styles.description}>
         <a
-          href="/"
+          href="/app/ssr"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
