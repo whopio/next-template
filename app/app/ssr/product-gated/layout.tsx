@@ -7,7 +7,7 @@ import { PropsWithChildren } from "react";
 import styles from "../../../../styles/Home.module.css";
 import { retrievePlan } from "./get-data";
 import PurchaseLink from "./PurchaseLink";
-import { Inter } from "@next/font/google";
+import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 

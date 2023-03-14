@@ -1,6 +1,6 @@
 import getSdk from "@/lib/get-user-sdk/app";
 import { NextAppPage } from "@/types/app-dir";
-import { Inter } from "@next/font/google";
+import { Inter } from "next/font/google";
 import { signIn, signOut } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";

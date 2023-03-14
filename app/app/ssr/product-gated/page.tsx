@@ -4,7 +4,7 @@ import { NextAppPage } from "@/types/app-dir";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../../../../styles/Home.module.css";
-import { Inter } from "@next/font/google";
+import { Inter } from "next/font/google";
 
 const ALLOWED_PRODUCT: string = process.env.NEXT_PUBLIC_REQUIRED_PRODUCT || "";
 

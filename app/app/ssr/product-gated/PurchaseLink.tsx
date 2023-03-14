@@ -4,7 +4,7 @@ import { usePurchaseLink } from "@/lib/get-purchase-link";
 import Link from "next/link";
 import { FunctionComponent, PropsWithChildren } from "react";
 import styles from "../../../../styles/Home.module.css";
-import { Inter } from "@next/font/google";
+import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
