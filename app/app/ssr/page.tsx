@@ -24,7 +24,7 @@ const Page: NextAppPage = async () => {
         </a>
         <p>
           Edit this page inside of{" "}
-          <code className={styles.code}>pages/ssr/index.tsx</code>
+          <code className={styles.code}>app/ssr/index.tsx</code>
         </p>
       </div>
 
