@@ -29,21 +29,33 @@ const IndexPage: NextPage = () => {
               rel="noopener noreferrer"
             >
               By{" "}
-              <Image
-                src="/RedAndBlack.png"
-                alt="Whop Logo"
-                className={styles.vercelLogo}
-                width={115}
-                height={24}
-                priority
-              />
+              <picture>
+                <source
+                  srcSet="/White.png"
+                  media="(prefers-color-scheme: dark)"
+                />
+                <Image
+                  src="/RedAndBlack.png"
+                  alt="Whop Logo"
+                  className={styles.vercelLogo}
+                  width={115}
+                  height={24}
+                  priority
+                />
+              </picture>
             </a>
           </div>
         </div>
 
         <div className={styles.center}>
           <div className={styles.thirteen}>
-            <Image src="/logo.svg" alt="13" width={110} height={100} priority />
+            <Image
+              src="/logo.svg"
+              alt="Whop W"
+              width={110}
+              height={100}
+              priority
+            />
           </div>
         </div>
 
@@ -92,7 +104,7 @@ const IndexPage: NextPage = () => {
           </a>
 
           <a
-            href="https://discord.whop.com/devs"
+            href="https://discord.whop.com/devs?utm_source=nextjs-template"
             className={styles.card}
             target="_blank"
             rel="noopener noreferrer"
