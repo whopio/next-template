@@ -145,9 +145,7 @@ const Page: NextPage<ProductGatedProps> = ({ membership, product, plan }) => {
 
             <div className={styles.center}>
               <div className={styles.otherbox}>
-                <h1 className={inter.className}>
-                  Access <a href="#">Granted 🚀</a>
-                </h1>
+                <h1 className={inter.className}>Access Granted 🚀 (SSR)</h1>
                 <p className={inter.className}>
                   This page is shown to a user who is signed in, and owns your
                   required product!
@@ -163,7 +161,11 @@ const Page: NextPage<ProductGatedProps> = ({ membership, product, plan }) => {
               }}
             >
               <a
-                href={"https://whop.com/hub/" + membership.id}
+                href={
+                  "https://whop.com/hub/" +
+                  membership.id +
+                  "?utm_source=nextjs-template"
+                }
                 className={styles.card}
               >
                 <h2 className={inter.className}>Customer Portal &rarr;</h2>
@@ -173,7 +175,11 @@ const Page: NextPage<ProductGatedProps> = ({ membership, product, plan }) => {
               </a>
 
               <a
-                href={"https://whop.com/hub/" + membership.id}
+                href={
+                  "https://whop.com/hub/" +
+                  membership.id +
+                  "?utm_source=nextjs-template"
+                }
                 className={styles.card}
               >
                 <h2 className={inter.className}>Leave a review &rarr;</h2>

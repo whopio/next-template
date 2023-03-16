@@ -38,9 +38,7 @@ const SSGProductGatedPage: NextPage = () => {
 
           <div className={styles.center}>
             <div className={styles.otherbox}>
-              <h1 className={inter.className}>
-                Access <a href="#">Granted 🚀</a> (SSG)
-              </h1>
+              <h1 className={inter.className}>Access Granted 🚀 (SSG)</h1>
               <p className={inter.className}>
                 This page is protected by the middleware, so if no SSG bailouts
                 are used here, the page will be statically served.

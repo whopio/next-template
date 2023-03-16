@@ -63,7 +63,11 @@ const Page: NextAppPage = async () => {
             }}
           >
             <a
-              href={"https://whop.com/hub/" + membership.id}
+              href={
+                "https://whop.com/hub/" +
+                membership.id +
+                "?utm_source=nextjs-template"
+              }
               className={styles.card}
             >
               <h2 className={inter.className}>Customer Portal &rarr;</h2>
@@ -71,7 +75,11 @@ const Page: NextAppPage = async () => {
             </a>
 
             <a
-              href={"https://whop.com/hub/" + membership.id}
+              href={
+                "https://whop.com/hub/" +
+                membership.id +
+                "?utm_source=nextjs-template"
+              }
               className={styles.card}
             >
               <h2 className={inter.className}>Leave a review &rarr;</h2>

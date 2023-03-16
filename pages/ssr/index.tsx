@@ -46,7 +46,7 @@ const Page: NextPage<UserProps> = ({ user }) => {
               <Link
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://dash.whop.com"
+                href="https://dash.whop.com?utm_source=nextjs-template"
               >
                 Whop{user ? `, ${user.username}!` : `!`}
               </Link>

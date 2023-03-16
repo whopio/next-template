@@ -24,14 +24,14 @@ const IndexPage: NextPage = () => {
           </p>
           <div>
             <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+              href="https://dash.whop.com?utm_source=nextjs-template"
               target="_blank"
               rel="noopener noreferrer"
             >
               By{" "}
               <Image
                 src="/RedAndBlack.png"
-                alt="Vercel Logo"
+                alt="Whop Logo"
                 className={styles.vercelLogo}
                 width={115}
                 height={24}
@@ -78,7 +78,7 @@ const IndexPage: NextPage = () => {
           </a>
 
           <a
-            href="https://docs.whop.com/software-intro"
+            href="https://docs.whop.com/software-intro?utm_source=nextjs-template"
             className={styles.card}
             target="_blank"
             rel="noopener noreferrer"
