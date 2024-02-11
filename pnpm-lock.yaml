@@ -15,8 +15,8 @@ dependencies:
     specifier: 18.0.9
     version: 18.0.9
   '@whop-sdk/core':
-    specifier: ^0.0.5
-    version: 0.0.5
+    specifier: ^0.0.7
+    version: 0.0.7
   eslint:
     specifier: 8.29.0
     version: 8.29.0
@@ -359,8 +359,8 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: false
 
-  /@whop-sdk/core@0.0.5:
-    resolution: {integrity: sha512-eCJXsVuYIYj5jqab+ptaVIQ8ciVUd3vnUmrltlwz0tq6vMLPIZ99Yx+1J7LNX4JkxHk6J8g9mgeadzmju/IOBg==}
+  /@whop-sdk/core@0.0.7:
+    resolution: {integrity: sha512-ZGuDQxS3+3Qlvhd3dw9+svNQTwXDW+IwxVDadAD4lAT64lYhtZBL3BQ4N6mJgVeyq9eYXxEBej8Fj6Dc4+P41Q==}
     engines: {node: '>=16.8.0'}
     dependencies:
       form-data: 4.0.0
